@@ -1,0 +1,39 @@
+title: Seating Arrangement Optimization
+email: your-email@example.com
+description: "Optimize seating arrangements at events based on friendship relationships using simulated annealing."
+baseurl: ""
+url: "https://yourusername.github.io"  # Replace with your GitHub Pages URL
+twitter_username: your-twitter-username
+github_username: your-github-username
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+plugins:
+  - jekyll-feed
+
+# Google Analytics (optional, remove if not needed)
+# google_analytics: UA-XXXXXXXX-X
+
+# Links to social media (optional)
+social_links:
+  - name: Twitter
+    url: https://twitter.com/your-twitter-username
+  - name: GitHub
+    url: https://github.com/your-github-username
+
+# Navigation settings
+navigation:
+  - text: Home
+    link: /
+  - text: About
+    link: /about/
+  - text: Blog
+    link: /blog/
+
+# Author settings (optional)
+author:
+  name: Your Name
+  bio: Data Scientist & Developer working on optimization algorithms and machine learning.
+  photo: /assets/images/your-photo.jpg

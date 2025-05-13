@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating Arrangement Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        #fileLabel {
+            display: inline-block;
+            margin: 10px 5px;
+        }
+        #submitBtn {
+            margin: 10px 5px;
+        }
+        #result {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seating Arrangement Web App</h1>
+        <input type="text" id="numSeatsPerTable" placeholder="Enter seats per table separated by commas (e.g., 4,3,5)" />
+        <br/>
+        <label id="fileLabel" for="fileInput" class="btn">Upload Excel File</label>
+        <input type="file" id="fileInput" class="file-input">
+        <button id="submitBtn" class="btn">Generate Seating Arrangement</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (file) {
+                const formData = new FormData();
+                formData.append('friendship_file', file);
+
+                const numSeatsPerTable = document.getElementById('numSeatsPerTable').value;
+                formData.append('num_seats_per_table', numSeatsPerTable);
+
+                fetch('/generate_seating', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => displaySeatingArrangement(data))
+                .catch(error => console.error('Error:', error));
+            } else {
+                console.error('No file selected');
+                alert('Please select a file before submitting.');
+            }
+        });
+
+        function displaySeatingArrangement(data) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<h2>Seating Arrangement:</h2>';
+            
+            data.seating_arrangement.forEach((table, index) => {
+                const tableNumber = index + 1;
+                const tableContent = '<strong>Table ' + tableNumber + ':</strong> ' + table.join(', ');
+                resultDiv.innerHTML += '<p>' + tableContent + '</p>';
+            });
+
+            resultDiv.innerHTML += '<p><strong>Score:</strong> ' + data.score + '</p>';
+        }
+    </script>
+</body>
+</html>
