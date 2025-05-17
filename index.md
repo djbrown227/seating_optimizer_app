@@ -13,11 +13,7 @@ This project uses **simulated annealing** to optimize seating arrangements at ev
 
 ## 📽️ Demo Video
 
-<div align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-</div>
-
-> 🔗 Replace `YOUR_VIDEO_ID` above with your actual YouTube video ID (e.g., `dQw4w9WgXcQ`)
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/omG6Dd9p_M" frameborder="0" allowfullscreen></iframe>
 
 ---
 
@@ -38,12 +34,12 @@ Here’s a simplified flow:
 
 ### 📊 Friendship Matrix Input
 
-![Friendship matrix sample](/assets/images/friendship_matrix_placeholder.png)
+![Friendship matrix sample](/assets/images/Screenshot 2025-05-13 at 2.14.33 PM.png)
 > Sample of the uploaded Excel file showing pairwise friendship scores.
 
 ### 🪑 Optimized Seating Chart Output
 
-![Seating chart output](/assets/images/seating_chart_placeholder.png)
+![Seating chart output](/assets/images/Seating_Optimizer/assets/Screenshot 2025-05-13 at 2.34.38 PM.png)
 > Optimized table arrangement where high-scoring friendships are grouped together.
 
 ---
