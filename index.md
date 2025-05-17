@@ -19,7 +19,7 @@ This project uses **simulated annealing** to optimize seating arrangements at ev
 
 ## 🧠 How It Works
 
-Simulated annealing is inspired by the process of **cooling molten metal**. The idea is to allow the system to make poor decisions occasionally (explore worse seating arrangements) to avoid getting stuck in a bad configuration (local optimum). Over time, the probability of accepting worse decisions is reduced, guiding the system to a globally optimized solution.
+The idea is to allow the algorithm to make poor decisions occasionally (explore worse seating arrangements) to avoid getting stuck in a bad configuration (local optimum). Over time, the probability of accepting worse decisions is reduced, guiding the system to a globally optimized solution.
 
 Here’s a simplified flow:
 1. Start with a **random arrangement** of people.
@@ -49,7 +49,7 @@ Here’s a simplified flow:
 - Upload a **friendship matrix** via Excel.
 - Customize the number of **seats per table**.
 - Generate an **optimized seating arrangement** that maximizes group cohesion.
-- See the results **visually** via seating charts and downloadable outputs.
+- See the results **visually**
 - **Planned Improvements**:
   - Penalize seating people with low friendship scores together.
   - Allow for **mandatory pairings** (e.g., best friends, family members).
@@ -71,7 +71,6 @@ A wedding planner uploads a friendship matrix, specifying 10 tables with 8 seats
 2. Upload the file through the app.
 3. Set the number of seats per table.
 4. Run the algorithm and view the output.
-5. Download the results or embed the charts.
 
 ---
 
@@ -86,8 +85,4 @@ This project is open-source and welcomes contributions!
 > For feature suggestions or bug reports, open an [issue](https://github.com/yourusername/seating-app/issues)
 
 ---
-
-## 📫 Contact
-
-Have feedback or want to collaborate? Reach out on [GitHub](https://github.com/yourusername) or [Twitter](https://twitter.com/yourhandle).
 
