@@ -82,7 +82,7 @@ This project is open-source and welcomes contributions!
 - Make your changes
 - Submit a pull request
 
-> For feature suggestions or bug reports, open an [issue](https://github.com/yourusername/seating-app/issues)
+> For feature suggestions or bug reports, open an [issue](https://github.com/djbrown227/seating_optimizer_app)
 
 ---
 
